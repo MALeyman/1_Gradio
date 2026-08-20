@@ -38,7 +38,7 @@ def get_detection_tab_2():
                 device_label = gr.Label(value=get_device(), label="Работаем на устройстве")
                 confidence_slider = gr.Slider(0, 1, value=0.5, label="Порог уверенности")
                 nms_slider = gr.Slider(0, 1, value=0.6, label="Порог NMS")
-                max_size_slider = gr.Slider(736, 736, value=736, step=0, label="Максимальный размер изображения")
+                max_size_slider = gr.Slider(minimum=256, maximum=736, value=736, step=32, label="Максимальный размер изображения")
 
 
             # Правая колонка с вкладками для изображения и видео
