@@ -1,4 +1,3 @@
-
 # Примеры работы моделей на Gradio  
 - Сегментация дорожных сцен  
 - Детекция ключевых точек лиц  
@@ -10,67 +9,43 @@
 
 ## Запуск локально 
 
-### Скачать проект в папку  
-```
-# Скачать проект в папку  
+### 1. Клонирование репозитория
+Склонируйте проект или скачайте его отдельной папкой через [download-directory](https://github.io):
+```bash
 git clone https://github.com/MALeyman/1_Gradio.git  
-
+cd 1_Gradio
 ```
-### Либо с ресурса  https://download-directory.github.io/  
 
-### Перейти в папку проекта 
-
-### Создать окружение
-```
+### 2. Настройка виртуального окружения
+Создайте и активируйте виртуальное окружение:
+```bash
+# Создание
 python -m venv .myenv
 
-```
-
-### Активировать окружение
-```
-# На Линукс
+# Активация на Linux/macOS
 source .myenv/bin/activate
 
-# На Виндовс
-.myenv\Scripts\activate.bat
-
+# Активация на Windows
+.myenv\Scripts\activate
 ```
 
-### Установить зависимости  
-```
+### 3. Установка зависимостей и скачивание моделей
+Установите необходимые библиотеки (включая `gdown` для загрузки моделей) и запустите скрипт автоматического скачивания весов:
+```bash
 pip install -r requirements.txt
+python download_models.py
 ```
 
-### Скачать модели, файлы.
-#### Запустить скрипт  __main.ipynb__  
-#### Либо:  
-```
-import gdown
-url = 'https://drive.google.com/uc?id=13Z5VjNKBO8zGFzC5ML3hMrUW2ynQGhsb'
-gdown.download(url, 'data.zip', quiet=False)
-
-import zipfile
-import os
-
-# Путь к скачанному архиву
-zip_path = "data.zip"
-# Каталог для распаковки (можно указать '.', если нужно в текущую папку)
-extract_dir = "."
-
-# Распаковка архива
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(extract_dir)
-
-print("Архив распакован")
-
-# Удаление архива
-os.remove(zip_path)
-print("Архив удален")
-```
-### ЗАПУСК
-```
+### 4. Запуск приложения
+```bash
 python app.py
 ```
+
+### 🌍 [Попробовать онлайн на Hugging Face Spaces](https://huggingface.co/spaces/makc-mon173/projects)
+
+------------------------
+
+<img width="1612" height="628" alt="Интерфейс приложения Gradio" src="https://github.com/user-attachments/assets/41f16545-2b2f-4adc-804c-64b6be516628" />
 
 
 ###  [Сайт](https://huggingface.co/spaces/makc-mon173/projects)
