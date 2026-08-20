@@ -13,12 +13,12 @@
 Склонируйте проект или скачайте его отдельной папкой через [download-directory](https://github.io):
 ```bash
 git clone https://github.com/MALeyman/1_Gradio.git  
-cd 1_Gradio/1_gradio_projects
 ```
 
 ### 2. Настройка виртуального окружения
 Создайте и активируйте виртуальное окружение:
 ```bash
+cd 1_Gradio/1_gradio_projects
 # Создание
 python -m venv .myenv
 
