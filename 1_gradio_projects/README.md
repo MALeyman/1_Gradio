@@ -45,7 +45,7 @@ python app.py
 
 ------------------------
 
-<img width="1612" height="628" alt="Интерфейс приложения Gradio" src="https://github.com/user-attachments/assets/41f16545-2b2f-4adc-804c-64b6be516628" />
+<img width="1000" height="628" alt="Интерфейс приложения Gradio" src="https://github.com/user-attachments/assets/41f16545-2b2f-4adc-804c-64b6be516628" />
 
 
 
